@@ -1,0 +1,68 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\definecolor{navy}{HTML}{1F3864}
+\titleformat{\section}{\Large\bfseries\color{navy}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+\setlist[itemize]{leftmargin=1.3em, itemsep=2pt, topsep=3pt}
+
+\begin{document}
+
+\begin{center}
+  {\huge \bfseries \color{navy} ((( name ))) }\\[4pt]
+  {\large ((( headline ))) }\\[6pt]
+  {\small ((( email ))) \;|\; \href{https://((( github )))}{((( github )))} \;|\; \href{https://((( portfolio )))}{((( portfolio )))} }
+\end{center}
+
+\section*{Research \& Professional Summary}
+((( summary )))
+
+\section*{Education}
+((* for edu in education *))
+\textbf{((( edu.school )))} \hfill ((( edu.location ))) \\
+\textit{((( edu.degree )))} \hfill \textit{((( edu.dates )))}
+((* if edu.coursework *))
+\begin{itemize}
+  \item Relevant coursework: ((( edu.coursework | join(', ') )))
+\end{itemize}
+((* endif *))
+\medskip
+((* endfor *))
+
+\section*{Technical Skills}
+((* for category, skills in skills_by_category.items() *))
+\textbf{((( category ))):} ((( skills | join(', ') )))\\
+((* endfor *))
+
+\section*{Skills Emphasized for This Position}
+((( matched_skills | join(', ') )))
+
+\section*{Professional Experience}
+((* for job in experience *))
+\textbf{((( job.company )))} \hfill \textit{((( job.dates )))} \\
+\textit{((( job.role )))}
+\begin{itemize}
+((* for bullet in job.bullets *))
+  \item ((( bullet )))
+((* endfor *))
+\end{itemize}
+\medskip
+((* endfor *))
+
+\section*{Selected Projects}
+((* for project in projects *))
+\textbf{((( project.name )))} \hfill \textit{((( project.date )))} \\
+\textit{((( project.stack )))}
+\begin{itemize}
+((* for bullet in project.bullets *))
+  \item ((( bullet )))
+((* endfor *))
+\end{itemize}
+\medskip
+((* endfor *))
+
+\end{document}

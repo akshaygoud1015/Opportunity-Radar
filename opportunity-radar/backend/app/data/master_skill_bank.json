@@ -1,0 +1,8 @@
+{
+  "Languages": ["Python", "Java", "C++", "C#", "JavaScript", "TypeScript", "Kotlin", "SQL", "HTML5", "CSS3"],
+  "Frameworks & Libraries": ["Flask", "FastAPI", "Django", "Node.js", "Streamlit", "Material UI", "REST APIs", "Scikit-learn", "Pandas", "NumPy"],
+  "AI / Machine Learning": ["Machine Learning", "Feature Engineering", "Data Mining", "Predictive Modeling", "LLMs", "RAG", "Vector Databases", "ChromaDB", "Google Gemini API", "Ollama", "LLaMA"],
+  "Databases": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Amazon DynamoDB", "Amazon RDS"],
+  "Cloud & DevOps": ["Docker", "Git", "GitHub", "CI/CD", "Linux", "Unix Shell", "Azure", "PythonAnywhere"],
+  "Tools & Technologies": ["Kafka", "Power BI", "WordPress", "Webpack", "Arduino", "VS Code", "IntelliJ IDEA"]
+}
